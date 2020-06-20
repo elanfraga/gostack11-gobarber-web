@@ -43,7 +43,6 @@
       "src/hooks/*tsx",
       "!src/hooks/index.tsx"
     ]
-
   },
   "browserslist": {
     "production": [
