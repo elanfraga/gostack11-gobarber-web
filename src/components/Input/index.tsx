@@ -11,13 +11,13 @@ import { useField } from '@unform/core';
 
 import { Container, Error } from './styles';
 
-interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   containerStyle?: object;
   icon?: React.ComponentType<IconBaseProps>;
 }
 
-const Input: React.FC<IInputProps> = ({
+const Input: React.FC<InputProps> = ({
   name,
   containerStyle = {},
   icon: Icon,
@@ -53,6 +53,7 @@ const Input: React.FC<IInputProps> = ({
       isErrored={!!error}
       isFilled={isFilled}
       isFocused={isFocused}
+      data-testid="input-container"
     >
       {Icon && <Icon size={20} />}
       <input
